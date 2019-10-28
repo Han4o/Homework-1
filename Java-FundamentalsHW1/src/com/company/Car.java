@@ -10,7 +10,7 @@ import java.util.ArrayList;
         private int capacity;
         private int speed = 0;
         public ArrayList<Man> passengers = new ArrayList<Man>(capacity);
-        private ArrayList<String> driver = new ArrayList<String>(1);
+        public ArrayList<Man> driver = new ArrayList<Man>(1);
 
 
         //Task 9
@@ -33,14 +33,11 @@ import java.util.ArrayList;
             return this.capacity;
         }
 
-        protected ArrayList<String> get_Driver(){
+        protected ArrayList<Man> get_Driver(){
             return this.driver;
        }
 
-        protected String set_Driver (String hey) {
-            this.driver.add(hey);
-            return("Driver is " + hey);
-        }
+
 
         protected void accelerate(){
             if (this.speed < 200) {

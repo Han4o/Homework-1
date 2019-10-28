@@ -8,6 +8,10 @@ public class Main {
         vova.setAge(26);
         Man Serghei = new Man ();
         Serghei.set_man("Serghei", 40);
+        Man vova1 = new Man();
+        vova1.set_man("Vova", 26);
+        Man andrei = new Man();
+        andrei.set_man("Andrei", 34);
         vova.walk();
         vova.eat();
         Car mercedes = new Car();
@@ -15,7 +19,7 @@ public class Main {
         mercedes.accelerate();
         mercedes.accelerate();
         mercedes.stop();
-        mercedes.get_Driver().add(vova.getName());
+        mercedes.driver.add(vova);
         System.out.println(mercedes.get_Driver());
         //Task №2, toString with StringBuffer and StringBuilder
         String car = mercedes.toString();
@@ -29,7 +33,9 @@ public class Main {
         System.out.println(vova.hashCode());
 
         //Task №2, equals implementation
-        System.out.println(vova.equals(Serghei));
+        System.out.println(vova.equals(vova1));
+        System.out.println(vova == vova1);
+
         //Task №5 Exception catching
         /*try {
             mercedes.passengers.add(vova);
